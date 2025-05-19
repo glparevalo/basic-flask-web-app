@@ -3,6 +3,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, Email, EqualTo, ValidationError
 from .models import User
 
+# ========== Main Class ========== 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[InputRequired(), Length(min=4, max=25)])
     email = StringField('Email', validators=[InputRequired(), Email()])
